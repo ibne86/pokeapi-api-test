@@ -1,0 +1,26 @@
+{
+  "name": "pokeapi-api-test",
+  "version": "1.0.0",
+  "description": "Using Cypress automation framework to test pokeapi api's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:open:chrome": "cypress open --browser chrome",
+    "cypress:run:firefox": "cypress run --browser firefox",
+    "cypress:open:firefox": "cypress open --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibne86/pokeapi-api-test.git"
+  },
+  "author": "Ibne Sina Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibne86/pokeapi-api-test/issues"
+  },
+  "homepage": "https://github.com/ibne86/pokeapi-api-test#readme",
+  "devDependencies": {
+    "cypress": "^13.11.0"
+  }
+}
