@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// //We are creating a custom command named GETrequest which has URL and userDataLink as argument
+// Cypress.Commands.add("GETrequest", (url, data) => {
+//   //Usual GET request command
+//   cy.request("GET", `${Cypress.env(url) + data}`);
+// });
+
+Cypress.Commands.add('getBerry', (idOrName, failOnStatusCode = true) => {
+    cy.request({
+      method: 'GET',
+      url: `/api/v2/berry/${idOrName}`,
+      failOnStatusCode: failOnStatusCode
+    });
+  });
