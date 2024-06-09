@@ -4,7 +4,7 @@ describe("Berry GET Request Test wtih Name", () => {
   });
 
   it("Validate GET request with valid name", function () {
-    cy.getBerry(this.berryNames.validBerryName).as("response");
+    cy.getBerry(this.berryNames.validBerryName, false).as("response");
       cy.get("@response").then((response) => {
         expect(response.status).to.equal(200);
         expect(response.body.firmness).to.have.property('name', 'super-hard');
