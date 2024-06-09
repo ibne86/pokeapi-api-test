@@ -37,3 +37,10 @@ Cypress.Commands.add('getBerry', (idOrName, failOnStatusCode = true) => {
       failOnStatusCode: failOnStatusCode
     });
   });
+
+Cypress.Commands.add('getBerryFlavor', (idOrName) => {
+    return cy.request({
+      method: 'GET',
+      url: `/api/v2/berry-flavor/${idOrName}`
+    });
+  });
